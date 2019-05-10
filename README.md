@@ -29,14 +29,30 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    .forEach is having you do a specific action for each item in an array, where .map is ALWAYS returning an array back to you.
 
 2. What is the difference between a function and a method?
+a method is a function within an object.
 
 3. What is closure?
+closure is the usage of variables within a certain scope, so that those variables are only visible within that context. i.e:
+
+const sayMyName = function() {
+    const myName = 'WillieVanilly';
+    return console.log(myName);
+}
+
+if I try to console.log(myName) outside of the context of that function, it would not be accessible, because it exists within the closure of that function.
+
 
 4. Describe the four rules of the 'this' keyword.
+    ~1.On a global/window level, it is referring to everything.
+    ~2. In the implicit binding context, you are using `this.key` where key is a value within the scope you are working, and it will return a value specific to that scope. this.name will give two different answers for objects with two different 'name' key:value pairs.
+    ~3. New binding is when we use 'this.newKey' to create a previously nonexistent key:value pair within an object, or assign value to something that wasn't already there.
+    ~4. explicit binding is when we use .call or .apply to change the meaning of 'this' for a specific instance, to be measured according to a different set of rules we established elsewhere.
 
 5. Why do we need super() in an extended class?
+super('banana') is important because it tells our class - which in this instance is extending another class- to fill the attributes of the class from which it is extending with its own information.
 
 ## Project Set up
 
